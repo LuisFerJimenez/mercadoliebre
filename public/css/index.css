@@ -1,0 +1,304 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/*CADA VEZ QUE EMPIEZO UN NUEVO PROYECTO DEBO NORMALIZAR MIS ESTILOS, ESTO SE HACE DE PRIMERO*/
+/* NORMALIZACIÓN */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root{
+    /* COLORES */
+    --amarillo: #eac926;
+    --azul: #03264c;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebed;
+    --verde: #39b54a;
+    --negro: #000;
+    --blanco: #fff;
+    /* TAMAÑO FUNETES */
+    --text-sm: 1.2em;
+    --text-md: 1.6em;
+    --text-lg: 1.8em;
+    --title-md: 2.4em;
+    /* FAMILIA DE FUENTES */
+    --roboto: "Roboto", sans-serif;
+}
+
+/* ESTILOS COMUNES */
+/*SIEMPRE HACER ESTO*/
+html{
+    font-size: 62.5%; /*equivale a 10px a partir de ahora*/
+    font-family: var(--roboto);
+}
+
+body{
+    background-color: var(--gris-claro);
+}
+
+h3{
+    font-size:var(--title-md);
+}
+
+p{
+    font-size: var(--text-sm);
+}
+.flex-row{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 7px;
+}
+/* CABECERA */
+header {
+    background-color: var(--amarillo);
+   
+  }
+  
+  div.top-header {
+    padding: 5%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    gap: 40px;
+    padding-top: 2%;
+  }
+  
+  header div.logo {
+    display:block;
+    width: 40%;
+    justify-content: center;
+  }
+  .form{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-grow: 1;
+  }
+
+  header button{
+    cursor: pointer;
+  }
+  
+  .form .input{
+    width: 80%;
+  }
+  header nav {
+    display: flex;
+    font-size: var(--text-sm);
+    justify-content: space-between;
+   
+  }
+  
+  header ul  {
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: -4%;
+    padding: 0% 4%;
+    display: none;
+  }
+  
+  header ul li a {
+    
+    text-decoration: none;
+    color: var(--negro);
+  }
+  
+  header form input {
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    color: var(--gris-oscuro);
+    padding: 5px;
+    border: var(--gris-claro);
+    border-radius: 10px;  
+    width: 100%;
+  }
+  
+  header form button {
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    width: 18px;
+    padding: 2px;
+    border: var(--gris-claro);
+    border-radius: 3px;  
+  }
+  
+  header div.parrafo {
+    text-align: center;
+    padding-bottom: 18px;
+    justify-content: center;
+  }
+  
+  div.burger-menu {
+    text-align: center;
+  }
+  
+  div.burger-menu i {
+    background-color: #0044aa;
+    font-size: 20px;
+    color: var(--blanco);
+    height: 40px;
+    width: 40px;
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+/* BANNER */
+section.banner img{
+    width: 100%;
+}
+
+/* MAIN */
+main{
+    width: 94%;
+    margin: 0 auto;
+}
+main section article{
+    background-color: var(--blanco);    
+    margin: 10px 0px;
+}
+main section article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+main section article img{
+    width: 100%;
+}
+
+.description{
+    color:var(--gris-oscuro);
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+main section article:hover .description{
+    opacity: 1;
+}
+.price{
+    font-size: var(--text-lg);
+    /*width: 30%;*/
+}
+.discount, .description{
+    font-size: var(--text-md);
+}
+/*.discount{
+    width: 70%;
+}*/
+main section article i,
+.discount{
+    color: var(--verde);
+}
+main section article i{
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--verde);
+    background-color: var(--blanco);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: transform 0.3s ease-in;
+}
+main section article:hover i{
+    transform: rotate(-90deg)
+}
+main section h3{
+    margin: 20px 0px;
+}
+article div.product-card{
+    width: 100%;
+    border-top: 1px solid var(--gris-claro);
+    padding: 14px;
+    position: relative;
+}
+
+/* FOOTER */
+footer{
+    padding: 10px;
+    text-align: center;
+    background-color:var(--blanco)
+}
+
+footer section i{
+    display: center;
+    font-size: 32px;
+    color: var(--celeste);
+    height: 40px;
+    width: 40px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+footer section i:hover{
+    color: #02a;
+}
+
+footer section h2{
+    text-align: center;
+    font-size: 18px;
+}
+footer p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 361px){
+   /* main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }*/
+    .products{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .products article{
+        max-width: 45%;
+    }
+}
+@media screen and (min-width: 769px){
+    .description{
+        opacity: 1;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+        justify-content: space-around;
+        margin: 8px;
+    }
+    header nav ul li{
+        display: flex;
+        justify-content: space-around;
+        margin: 8px;
+    }
+        
+    div.burger-menu i{
+        display: none;
+    }
+    .products article{
+        max-width: 23%;
+    }
+
+    footer section{
+        display:flex;
+    }
+    footer div p{
+        padding-top: 19px;
+    }
+}
+

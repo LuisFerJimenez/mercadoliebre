@@ -1,0 +1,245 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+/* NORMALIZACIÓN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+  /* colores */
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+  --negro: #000000;
+  --blanco: #ffffff;
+  /* tamaños de fuentes */
+  --text-sm: 1.2em;
+  --text-md: 1.6em;
+  --text-lg: 1.8em;
+  --title-md: 2.4em;
+  /* familias de fuentes */
+  --roboto: "Roboto", sans-serif;
+}
+body{
+  background-color: var(--gris-claro)
+}
+/* ESTILOS COMUNES */
+
+html {
+  font-size: 62.5%;
+  font-family: var(--roboto);
+}
+
+h3 {
+  font-size: var(--title-md);
+}
+
+p {
+  font-size: var(--text-sm);
+}
+
+/* CABECERA */
+
+header {
+    background-color: var(--amarillo);
+   
+  }
+  
+  div.top-header {
+    padding: 5%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    gap: 40px;
+    padding-top: 2%;
+  }
+  
+  header div.logo {
+    display:block;
+    width: 40%;
+    justify-content: center;
+  }
+  .form{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-grow: 1;
+  }
+
+  header button{
+    cursor: pointer;
+  }
+  
+  .form .input{
+    width: 80%;
+  }
+  header nav {
+    display: flex;
+    font-size: var(--text-sm);
+    justify-content: space-between;
+   
+  }
+  
+  header ul  {
+    list-style-type: none;
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: -4%;
+    padding: 0% 4%;
+    display: none;
+  }
+  
+  header ul li a {
+    
+    text-decoration: none;
+    color: var(--negro);
+  }
+  
+  header form input {
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    color: var(--gris-oscuro);
+    padding: 5px;
+    border: var(--gris-claro);
+    border-radius: 10px;  
+    width: 100%;
+  }
+
+   
+  
+  header form button {
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    width: 18px;
+    padding: 2px;
+    border: var(--gris-claro);
+    border-radius: 3px;  
+  }
+  
+  header div.parrafo {
+      text-align: center;
+      padding-bottom: 18px;
+      justify-content: center;
+    }
+  
+  div.burger-menu {
+    text-align: center;
+  }
+  
+  div.burger-menu i {
+    background-color: #0044aa;
+    font-size: 20px;
+    color: var(--blanco);
+    height: 40px;
+    width: 40px;
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+/*MAIN*/
+main form div{
+   
+   padding: 44px;
+   padding-top: 8px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   grid-gap: 10px;
+}
+main form h4{
+    display: flex;
+    padding: 8px 0px 2px 0px;
+    font-size: var(--text-md);
+    justify-content: center;
+}
+
+main form input{
+
+ padding: 10px;
+ width: 70%;
+ border: var(--gris-claro);
+ border-radius: 10px;  
+ 
+
+}
+
+ .btn-login{
+    background-color: var(--celeste);
+    transition: all 0.5s ease;
+    cursor: pointer;
+ }
+ .btn-login:hover{
+    background-color: #02a;
+}
+
+ /* FOOTER */
+ footer{
+    padding: 10px;
+    text-align: center;
+    background-color:var(--blanco)
+}
+
+footer section i{
+    display: center;
+    font-size: 32px;
+    color: var(--celeste);
+    height: 40px;
+    width: 40px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+footer section i:hover{
+    color: #02a;
+}
+
+footer section h2{
+    text-align: center;
+    font-size: 18px;
+}
+footer p{
+    text-align: center;
+    margin-top: 10px;
+}
+/* RESPONSIVE */
+@media screen and (min-width: 769px){
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+        justify-content: space-around;
+        margin: 8px;
+    }
+    header nav ul li{
+        display: flex;
+        justify-content: space-around;
+        margin: 8px;
+    }
+        
+    div.burger-menu i{
+        display: none;
+    }
+    footer section{
+        display:flex;
+    }
+    footer div p{
+        padding-top: 19px;
+    }
+}
+

@@ -1,0 +1,311 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+/* NORMALIZACIÓN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+  /* colores */
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+  --negro: #000000;
+  --blanco: #ffffff;
+  /* tamaños de fuentes */
+  --text-sm: 1.2em;
+  --text-md: 1.6em;
+  --text-lg: 1.8em;
+  --title-md: 2.4em;
+  /* familias de fuentes */
+  --roboto: "Roboto", sans-serif;
+}
+body{
+  background-color: var(--gris-claro)
+}
+/* ESTILOS COMUNES */
+
+html {
+  font-size: 62.5%;
+  font-family: var(--roboto);
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h3 {
+  font-size: var(--title-md);
+}
+
+p {
+  font-size: var(--text-sm);
+}
+/* CABECERA */
+
+header {
+  background-color: var(--amarillo);
+ 
+}
+
+div.top-header {
+  padding: 5%;
+  display:flex;
+  flex-wrap: wrap;
+  align-items:center;
+  gap: 40px;
+  padding-top: 2%;
+}
+
+header div.logo {
+  display:block;
+  width: 40%;
+  justify-content: center;
+}
+.form{
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-grow: 1;
+}
+
+header button{
+    cursor: pointer;
+}
+
+.form .input{
+  width: 80%;
+}
+header nav {
+  display: flex;
+  font-size: var(--text-sm);
+  justify-content: space-between;
+}
+
+header ul  {
+  list-style-type: none;
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-top: -4%;
+  padding: 0% 4%;
+  display: none;
+}
+
+header ul li a {
+  
+  text-decoration: none;
+  color: var(--negro);
+}
+
+header form input {
+  background-color: var(--blanco);
+  border: 1px solid var(--negro);
+  color: var(--gris-oscuro);
+  padding: 5px;
+  border: var(--gris-claro);
+  border-radius: 10px;  
+  width: 100%;
+}
+
+header form button {
+  background-color: var(--blanco);
+  border: 1px solid var(--negro);
+  width: 18px;
+  padding: 2px;
+  border: var(--gris-claro);
+  border-radius: 3px;  
+}
+
+header div.parrafo {
+    text-align: center;
+    padding-bottom: 18px;
+    justify-content: center;
+  }
+
+div.burger-menu {
+  text-align: center;
+}
+
+div.burger-menu i {
+  background-color: #0044aa;
+  font-size: 20px;
+  color: var(--blanco);
+  height: 40px;
+  width: 40px;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+section.banner img{
+    width: 100%;
+  }
+
+/* MAIN */
+
+  main{
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  main div.menu-register{
+      display: flex;
+      justify-content: center;
+  }
+  
+  main form div.menu-register {
+      padding: 23px;
+      padding-top: 11px;
+      padding-bottom: 13px;
+      flex-wrap: wrap;
+  }
+  main form div.menu-register input {
+    padding: 11px;  
+    width: 100%;
+    border: solid var(--gris-claro);
+    border-radius: 10px;  
+   
+  }
+  main form div label b,h4 {
+    display:flex;
+    padding: 8px;
+    font-size: var(--text-sm);
+  }
+  main form div.section2{
+    padding: 23px;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    flex-wrap: wrap;
+  }
+   main form div.profile{
+    padding:1px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  main form div.profile input{
+    display: inline-flex;
+  }
+  main form div.profile div{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  
+  main form div.btn {
+    display: flex;
+    padding: 11px;
+    justify-content: center;
+  }
+  main form div.btn input{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 5px;
+    border: solid var(--gris-claro);
+    background-color: var(--celeste);
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+
+  main form div.btn input:hover{
+      background-color: #02a;
+  }
+  
+/*FOOTER*/
+footer{
+    padding: 10px;
+    text-align: center;
+    background-color:var(--blanco)
+}
+
+footer section i{
+    display: center;
+    font-size: 32px;
+    color: var(--celeste);
+    height: 40px;
+    width: 40px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+footer section i:hover{
+    color: #02a;
+}
+
+footer section h2{
+    text-align: center;
+    font-size: 18px;
+}
+footer p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 769px){
+    main section article .description{
+        display: block;
+    }
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    header nav ul{
+        display: flex;
+        justify-content: space-around;
+        margin: 8px;
+    }
+    header nav ul li{
+        display: flex;
+        justify-content: space-around;
+        margin: 8px;
+    }
+        
+    div.burger-menu i{
+        display: none;
+    }
+    div .interests{
+      width: 14%;
+    }
+    main form div.menu-register {
+      padding: 85px;
+      padding-top: 11px;
+      padding-bottom: 13px;
+      flex-wrap: wrap;
+  }
+    main form div.section2{
+      padding: 85px;
+      padding-top: 11px;
+      padding-bottom: 13px;
+      flex-wrap: wrap;
+    }
+    footer section{
+        display:flex;
+    }
+    footer div p{
+        padding-top: 19px;
+    }
+}
+
